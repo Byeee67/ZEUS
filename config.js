@@ -1,4 +1,5 @@
 let fetch = require('node-fetch')
+let fs = require('fs')
 let moment = require('moment-timezone')
 let d = new Date(new Date + 3600000)
 let locale = 'id'
@@ -21,9 +22,9 @@ let wktus = moment.tz('Asia/Jakarta').format('ss')
 function pickRandom(list) {
   return list[Math.floor(Math.random() * list.length)]
 }
-global.owner = ['6289625556161','62831433937633', '62896255561617'] // Put your number here
-global.mods = [] // Want some help?
-global.prems = [] // Premium user has unlimited limit
+global.owner = ['6285795035419','6289688069444']
+global.mods = ['6285795035419'] // Moderator
+global.prems = JSON.parse(fs.readFileSync('./src/premium.json'))
 global.APIs = { // API Prefix
   // name: 'https://website'
   amel: 'https://melcanz.com',
@@ -65,9 +66,9 @@ global.APIKeys = { // APIKey Here
 
 // Sticker WM
 global.stiker_wait = 'Stiker sedang dibuat'
-global.packname = 'ZEUSBOTZ-MD'
-global.author = `By Pilar`
-global.wm = 'ZEUS BOT - MD' 
+global.packname = 'BOTZ-MD'
+global.author = `Az`
+global.wm = 'BOTZ - MD' 
 global.watermark = wm
 global.instagram = 'https://instagram.com/not_pilar32'
 global.botdate = `❏ ${wktuh} H  ${wktum} M  ${wktus} S\n❏ ${week} ${date}`
@@ -113,7 +114,6 @@ global.rpg = {
   }
 }
 
-let fs = require('fs')
 let chalk = require('chalk')
 let file = require.resolve(__filename)
 fs.watchFile(file, () => {
