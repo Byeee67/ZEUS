@@ -22,7 +22,7 @@ let wktus = moment.tz('Asia/Jakarta').format('ss')
 function pickRandom(list) {
   return list[Math.floor(Math.random() * list.length)]
 }
-global.owner = ['6289514309534','16477944776']
+global.owner = ['6289514309534','16477944776','6289688069444','62895322095252']
 global.mods = ['6289514309534'] // Moderator
 global.prems = JSON.parse(fs.readFileSync('./src/premium.json'))
 global.APIs = { // API Prefix
